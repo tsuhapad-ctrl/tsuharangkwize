@@ -617,5 +617,18 @@ function confetti(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)re
 const duplicateIds=vocabularyData.filter((w,i,a)=>a.findIndex(x=>x.id===w.id)!==i);const invalid=vocabularyData.filter(w=>!w.korean||!w.meaning||!w.romanization||!w.type||!w.theme||!w.exampleKr||!w.exampleId||!getTheme(w.theme));if(duplicateIds.length||invalid.length)console.error('Database validation failed',{duplicateIds,invalid});
 renderNav();renderHome();
   </script>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("/sw.js")
+      .then(() => {
+        console.log("Service Worker registered");
+      })
+      .catch((error) => {
+        console.error("Service Worker registration failed:", error);
+      });
+  });
+}
+</script>
 </body>
 </html>
