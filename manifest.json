@@ -1,0 +1,10 @@
+{
+  "name": "TOPIK I Vocabulary Master",
+  "short_name": "TOPIK I",
+  "description": "Aplikasi belajar kosakata TOPIK I Bahasa Korea",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait"
+}
